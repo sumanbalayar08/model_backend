@@ -4,7 +4,7 @@ services:
     build: .
     volumes:
       - .:/model_backend
-    image: smodel_backend:latest
+    image: model_backend:latest
     container_name: model_container
     command: gunicorn app:app --host 0.0.0.0 --port 8000
 
