@@ -5,8 +5,10 @@ services:
     volumes:
       - .:/model_backend
     image: model_backend:latest
+    ports:
+      - 8000:8000
     container_name: model_container
-    command: gunicorn app:app
+    command: gunicorn -w 4 -b :8000 app:app
 
   nginx:
     image: nginx:latest
