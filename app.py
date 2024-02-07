@@ -36,7 +36,6 @@ disease_solutions = {
     'Tomato_healthy': 'No action required. Maintain plant health and monitor for pests.'
 }
 
-
 def model_predict(img_path, model):
     img = image.load_img(img_path, grayscale=False, target_size=(64, 64))
     show_img = image.load_img(img_path, grayscale=False, target_size=(64, 64))
