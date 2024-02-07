@@ -1,0 +1,19 @@
+version: '4.21.1'
+services:
+  app:  
+    build: .
+    volumes:
+      - .:/model_backend
+    image: smodel_backend:latest
+    container_name: model_container
+    command: gunicorn app:app --host 0.0.0.0 --port 8000
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx_container
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - app
