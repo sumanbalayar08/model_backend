@@ -6,7 +6,7 @@ services:
       - .:/model_backend
     image: model_backend:latest
     container_name: model_container
-    command: gunicorn app:app
+    command: gunicorn -w 4 app:app
 
   nginx:
     image: nginx:latest
