@@ -25,7 +25,7 @@ libclang==16.0.6
 Markdown==3.5.2
 MarkupSafe==2.1.5
 ml-dtypes==0.2.0
-networkx==3.2.1
+networkx
 numpy==1.26.4
 oauthlib==3.2.2
 opt-einsum==3.3.0
